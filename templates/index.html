@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Flask-punkAPI{% endblock %}
+
+{% block content %}
+    <h1>HOME</h1>
+    <a href="{{ url_for('beers') }}">Check the Beers!</a>
+    <a href="{{ url_for('random_beer') }}">Check a Random Beer!</a>
+{% endblock %}

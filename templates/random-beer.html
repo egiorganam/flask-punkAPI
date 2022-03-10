@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Flask-punkAPI{% endblock %}
+
+{% block content %}
+    <h1>{{ beer[0]['name'] }}</h1>
+    <img src="{{ beer[0]['image_url'] }}" alt="product-image">
+    <h3>{{ beer[0]['tagline'] }}</h3>
+    <p>{{ beer[0]['description'] }}</p>
+    <p>
+        <strong>Food Pairing:</strong>
+    </p>
+    <ul>
+        {% for food in beer[0]['food_pairing'] %}
+        <li>{{ food }}</li>
+    {% endfor %}
+    </ul>
+    <p>
+        <strong>Brewers Tips:</strong> {{ beer[0]['brewers_tips'] }}
+    </p>
+{% endblock %}
